@@ -1,0 +1,6 @@
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\bin\Debug\DAL.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\bin\Debug\DAL.pdb
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.pdb

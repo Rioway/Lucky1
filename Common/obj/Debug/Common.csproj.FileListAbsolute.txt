@@ -1,0 +1,10 @@
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\Common.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\Common.pdb
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\DAL.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\Models.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\DAL.pdb
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\bin\Debug\Models.pdb
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.dll
+C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.pdb
