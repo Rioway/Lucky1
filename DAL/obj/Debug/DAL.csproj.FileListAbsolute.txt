@@ -4,3 +4,11 @@ C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.csprojResolv
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.dll
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\DAL\obj\Debug\DAL.pdb
+E:\Coding\C#\Lucky1\Lucky1\DAL\bin\Debug\DAL.dll
+E:\Coding\C#\Lucky1\Lucky1\DAL\bin\Debug\DAL.pdb
+E:\Coding\C#\Lucky1\Lucky1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Coding\C#\Lucky1\Lucky1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Coding\C#\Lucky1\Lucky1\DAL\obj\Debug\DAL.dll
+E:\Coding\C#\Lucky1\Lucky1\DAL\obj\Debug\DAL.pdb
+E:\Coding\C#\Lucky1\Lucky1\DAL\bin\Debug\Models.dll
+E:\Coding\C#\Lucky1\Lucky1\DAL\bin\Debug\Models.pdb

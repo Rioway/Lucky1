@@ -41,5 +41,26 @@ namespace Common
             }
             return objList;
         }
+        public static bool WriteFile(string filePath,List<Person> objList)
+        {
+            //清空数据
+            try
+            {
+                File.WriteAllText(filePath, string.Empty);
+                //逐行写入
+                StreamWriter sw = new StreamWriter(filePath, true, Encoding.Default);
+                foreach (Person item in objList)
+                {
+                    string strPerson = item.PersonID.ToString() + ',' + item.PersonName + ',' + item.PersonMobile;
+                    sw.WriteLine(strPerson);
+                }
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
     }
 }

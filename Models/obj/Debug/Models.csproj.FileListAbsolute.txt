@@ -4,3 +4,9 @@ C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Models\obj\Debug\Models.csproj
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Models\obj\Debug\Models.dll
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Models\obj\Debug\Models.pdb
+E:\Coding\C#\Lucky1\Lucky1\Models\bin\Debug\Models.dll
+E:\Coding\C#\Lucky1\Lucky1\Models\bin\Debug\Models.pdb
+E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.dll
+E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.pdb

@@ -8,3 +8,13 @@ C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.csproj
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.dll
 C:\Users\Rioway\Desktop\Lucky-master\Lucky-master\Common\obj\Debug\Common.pdb
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\Common.dll
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\Common.pdb
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\DAL.dll
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\Models.dll
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\DAL.pdb
+E:\Coding\C#\Lucky1\Lucky1\Common\bin\Debug\Models.pdb
+E:\Coding\C#\Lucky1\Lucky1\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Coding\C#\Lucky1\Lucky1\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Coding\C#\Lucky1\Lucky1\Common\obj\Debug\Common.dll
+E:\Coding\C#\Lucky1\Lucky1\Common\obj\Debug\Common.pdb
