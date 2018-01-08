@@ -19,5 +19,10 @@ namespace Common
             Regex objRegex = new Regex(@"^[1]\d{11}$");
             return objRegex.IsMatch(txt);
         }
+        public static bool IsNumber(string txt)
+        {
+            Regex objRegex = new Regex(@"^[0-9]*$");
+            return objRegex.IsMatch(txt);
+        }
     }
 }

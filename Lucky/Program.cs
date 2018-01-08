@@ -31,7 +31,7 @@ namespace Lucky
         //【4】重复中奖设置
         public static bool drawRepeat = false;
         //【5】奖品的明细
-        // public  static List<Present> objListPresent = null;
+        public  static List<Prize> objListPrize = null;
 
         //【6】中奖者信息
         // public static List<LuckyPerson> objListLuckyPerson = null;

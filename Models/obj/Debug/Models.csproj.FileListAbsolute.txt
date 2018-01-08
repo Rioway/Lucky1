@@ -10,3 +10,9 @@ E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.csprojResolveAssemblyReferenc
 E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.dll
 E:\Coding\C#\Lucky1\Lucky1\Models\obj\Debug\Models.pdb
+D:\coding\Lucky1\Models\bin\Debug\Models.dll
+D:\coding\Lucky1\Models\bin\Debug\Models.pdb
+D:\coding\Lucky1\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\coding\Lucky1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\coding\Lucky1\Models\obj\Debug\Models.dll
+D:\coding\Lucky1\Models\obj\Debug\Models.pdb
