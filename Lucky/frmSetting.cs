@@ -30,13 +30,26 @@ namespace Lucky
             else rbRepeat.Checked = true;
 
             gbPrizeDetail.Enabled = false;
-
+            //初始化数据
             dgvPrize.DataSource = null;
             dgvPrize.AutoGenerateColumns = false;
 
-            if (Program.objListPrize == null) 
+            if (Program.objListPrize == null)
+            {
                 Program.objListPrize = new List<Prize>();
-            else { }
+                LoadInitialData();
+                dgvPrize.DataSource = Program.objListPrize;
+
+                txtPrizeID.Text = dgvPrize.Rows[0].Cells[0].Value.ToString();
+                txtPrizeLevel.Text = dgvPrize.Rows[0].Cells[1].Value.ToString();
+                txtPrizeNumber.Text = dgvPrize.Rows[0].Cells[2].Value.ToString();
+                txtPrizeName.Text = dgvPrize.Rows[0].Cells[3].Value.ToString();
+                lbTotalPrize.Text = objPrizeService.GetPrizeSum(Program.objListPrize);
+            }
+            else
+            {
+
+            }
         }
 
 
@@ -92,7 +105,24 @@ namespace Lucky
         }
         private void btDelete_Click(object sender, EventArgs e)  //删除
         {
-
+            if (dgvPrize.Rows.Count == 0)
+            {
+                MessageBox.Show("没有数据,无法删除", "系统消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (dgvPrize.CurrentRow.Selected == false) return;
+            else
+            {
+                string info = "您确定删除奖品【奖品级别：" + dgvPrize.CurrentRow.Cells[1].Value.ToString() + "】信息吗？";
+                DialogResult result = MessageBox.Show(info, "系统消息", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    objPrizeService.DeletePrize(dgvPrize.CurrentRow.Cells[0].Value.ToString(), Program.objListPrize);
+                    LoadPrizeInfo(Program.objListPrize);
+                    lbTotalPrize.Text = objPrizeService.GetPrizeSum(Program.objListPrize);
+                    MessageBox.Show("删除成功！", "系统消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
         private void btnCommit_Click(object sender, EventArgs e)   //提交添加或者修改
         {
@@ -128,7 +158,7 @@ namespace Lucky
                     //刷新
                     LoadPrizeInfo(Program.objListPrize);
                     //更新数量
-                    lbTotalPrize.Text = (int.Parse(lbTotalPrize.Text) + objPrize.PrizeNumber).ToString();
+                    lbTotalPrize.Text = objPrizeService.GetPrizeSum(Program.objListPrize);
                     EnbleButton();
                     //添加成功
                     MessageBox.Show("修改成功！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,6 +172,32 @@ namespace Lucky
         {
             EnbleButton(); 
             LoadPrizeInfo(Program.objListPrize);
+        }
+        private void dgvPrize_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvPrize.Rows.Count == 0) return;
+            else
+            {
+                try
+                {
+                    txtPrizeID.Text = dgvPrize.CurrentRow.Cells[0].Value.ToString();
+                    txtPrizeLevel.Text = dgvPrize.CurrentRow.Cells[1].Value.ToString();
+                    txtPrizeNumber.Text = dgvPrize.CurrentRow.Cells[2].Value.ToString();
+                    txtPrizeName.Text = dgvPrize.CurrentRow.Cells[3].Value.ToString();
+                }
+                catch 
+                {
+                    if (dgvPrize.Rows.Count == 0 || dgvPrize == null) return;
+                    else  //全部删除之后会产生问题
+                    {
+                        txtPrizeID.Text = dgvPrize.Rows[0].Cells[0].Value.ToString();
+                        txtPrizeLevel.Text = dgvPrize.Rows[0].Cells[1].Value.ToString();
+                        txtPrizeNumber.Text = dgvPrize.Rows[0].Cells[2].Value.ToString();
+                        txtPrizeName.Text = dgvPrize.Rows[0].Cells[3].Value.ToString();
+                    }                 
+                }
+                
+            }
         }
 
         //自定义方法
@@ -224,17 +280,13 @@ namespace Lucky
             return true;
 
         }
-
-        private void dgvPrize_SelectionChanged(object sender, EventArgs e)
+        private void LoadInitialData()
         {
-            if (dgvPrize.Rows.Count == 0) return;
-            else
-            {
-                txtPrizeID.Text = dgvPrize.CurrentRow.Cells[0].Value.ToString();
-                txtPrizeLevel.Text = dgvPrize.CurrentRow.Cells[1].Value.ToString();
-                txtPrizeNumber.Text = dgvPrize.CurrentRow.Cells[2].Value.ToString();
-                txtPrizeName.Text = dgvPrize.CurrentRow.Cells[3].Value.ToString();
-            }
+            Program.objListPrize.Add(new Prize { PrizeID = 1, PrizeLevel = "特等奖", PrizeNumber = 1, PrizeName = "Iphone X", });
+            Program.objListPrize.Add(new Prize { PrizeID = 2, PrizeLevel = "一等奖", PrizeNumber = 3, PrizeName = "Ipad", });
+            Program.objListPrize.Add(new Prize { PrizeID = 3, PrizeLevel = "二等奖", PrizeNumber = 5, PrizeName = "小米6", });
+            Program.objListPrize.Add(new Prize { PrizeID = 4, PrizeLevel = "三等奖", PrizeNumber = 10, PrizeName = "小米蓝牙音箱", });
         }
+
     }
 }

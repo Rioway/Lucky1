@@ -56,5 +56,18 @@ namespace DAL
                 }
             }
         }
+        public string GetPrizeSum(List<Prize> objList)
+        {
+            int sum = 0;
+            if (objList == null || objList.Count == 0) return "0";
+            else
+            {
+                foreach (Prize item in objList)
+                {
+                    sum += item.PrizeNumber;
+                }
+            }
+            return sum.ToString();
+        }
     }
 }
