@@ -43,29 +43,29 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvPrize = new System.Windows.Forms.DataGridView();
+            this.PrizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrizeLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrizeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrizeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.gbPrizeDetail = new System.Windows.Forms.GroupBox();
             this.txtPrizeName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbDenyRepeat = new System.Windows.Forms.RadioButton();
-            this.rbRepeat = new System.Windows.Forms.RadioButton();
+            this.rbLtoS = new System.Windows.Forms.RadioButton();
             this.rbStoL = new System.Windows.Forms.RadioButton();
             this.btnSaveSetting = new System.Windows.Forms.Button();
-            this.rbLtoS = new System.Windows.Forms.RadioButton();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbRepeat = new System.Windows.Forms.RadioButton();
+            this.rbDenyRepeat = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTotalPrize = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.PrizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrizeLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrizeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrizeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrize)).BeginInit();
             this.gbPrizeDetail.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -248,6 +248,38 @@
             this.dgvPrize.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrize.Size = new System.Drawing.Size(545, 221);
             this.dgvPrize.TabIndex = 9;
+            this.dgvPrize.SelectionChanged += new System.EventHandler(this.dgvPrize_SelectionChanged);
+            // 
+            // PrizeID
+            // 
+            this.PrizeID.DataPropertyName = "PrizeID";
+            this.PrizeID.HeaderText = "编号";
+            this.PrizeID.Name = "PrizeID";
+            this.PrizeID.ReadOnly = true;
+            this.PrizeID.Width = 80;
+            // 
+            // PrizeLevel
+            // 
+            this.PrizeLevel.DataPropertyName = "PrizeLevel";
+            this.PrizeLevel.HeaderText = "级别";
+            this.PrizeLevel.Name = "PrizeLevel";
+            this.PrizeLevel.ReadOnly = true;
+            this.PrizeLevel.Width = 120;
+            // 
+            // PrizeNumber
+            // 
+            this.PrizeNumber.DataPropertyName = "PrizeNumber";
+            this.PrizeNumber.HeaderText = "数量";
+            this.PrizeNumber.Name = "PrizeNumber";
+            this.PrizeNumber.ReadOnly = true;
+            // 
+            // PrizeName
+            // 
+            this.PrizeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PrizeName.DataPropertyName = "PrizeName";
+            this.PrizeName.HeaderText = "奖品";
+            this.PrizeName.Name = "PrizeName";
+            this.PrizeName.ReadOnly = true;
             // 
             // label2
             // 
@@ -318,29 +350,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "抽奖基本设置";
             // 
-            // rbDenyRepeat
+            // rbLtoS
             // 
-            this.rbDenyRepeat.AutoSize = true;
-            this.rbDenyRepeat.Checked = true;
-            this.rbDenyRepeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbDenyRepeat.Location = new System.Drawing.Point(8, 3);
-            this.rbDenyRepeat.Name = "rbDenyRepeat";
-            this.rbDenyRepeat.Size = new System.Drawing.Size(125, 23);
-            this.rbDenyRepeat.TabIndex = 5;
-            this.rbDenyRepeat.TabStop = true;
-            this.rbDenyRepeat.Text = "不允许重复中奖";
-            this.rbDenyRepeat.UseVisualStyleBackColor = true;
-            // 
-            // rbRepeat
-            // 
-            this.rbRepeat.AutoSize = true;
-            this.rbRepeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbRepeat.Location = new System.Drawing.Point(176, 1);
-            this.rbRepeat.Name = "rbRepeat";
-            this.rbRepeat.Size = new System.Drawing.Size(111, 23);
-            this.rbRepeat.TabIndex = 5;
-            this.rbRepeat.Text = "允许重复中奖";
-            this.rbRepeat.UseVisualStyleBackColor = true;
+            this.rbLtoS.AutoSize = true;
+            this.rbLtoS.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbLtoS.Location = new System.Drawing.Point(268, 63);
+            this.rbLtoS.Name = "rbLtoS";
+            this.rbLtoS.Size = new System.Drawing.Size(111, 23);
+            this.rbLtoS.TabIndex = 5;
+            this.rbLtoS.Text = "从大奖到小奖";
+            this.rbLtoS.UseVisualStyleBackColor = true;
             // 
             // rbStoL
             // 
@@ -369,17 +388,6 @@
             this.btnSaveSetting.UseVisualStyleBackColor = false;
             this.btnSaveSetting.Click += new System.EventHandler(this.btnSaveSetting_Click);
             // 
-            // rbLtoS
-            // 
-            this.rbLtoS.AutoSize = true;
-            this.rbLtoS.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbLtoS.Location = new System.Drawing.Point(268, 63);
-            this.rbLtoS.Name = "rbLtoS";
-            this.rbLtoS.Size = new System.Drawing.Size(111, 23);
-            this.rbLtoS.TabIndex = 5;
-            this.rbLtoS.Text = "从大奖到小奖";
-            this.rbLtoS.UseVisualStyleBackColor = true;
-            // 
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(89, 25);
@@ -402,6 +410,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(335, 30);
             this.panel1.TabIndex = 18;
+            // 
+            // rbRepeat
+            // 
+            this.rbRepeat.AutoSize = true;
+            this.rbRepeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbRepeat.Location = new System.Drawing.Point(176, 1);
+            this.rbRepeat.Name = "rbRepeat";
+            this.rbRepeat.Size = new System.Drawing.Size(111, 23);
+            this.rbRepeat.TabIndex = 5;
+            this.rbRepeat.Text = "允许重复中奖";
+            this.rbRepeat.UseVisualStyleBackColor = true;
+            // 
+            // rbDenyRepeat
+            // 
+            this.rbDenyRepeat.AutoSize = true;
+            this.rbDenyRepeat.Checked = true;
+            this.rbDenyRepeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbDenyRepeat.Location = new System.Drawing.Point(8, 3);
+            this.rbDenyRepeat.Name = "rbDenyRepeat";
+            this.rbDenyRepeat.Size = new System.Drawing.Size(125, 23);
+            this.rbDenyRepeat.TabIndex = 5;
+            this.rbDenyRepeat.TabStop = true;
+            this.rbDenyRepeat.Text = "不允许重复中奖";
+            this.rbDenyRepeat.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -468,37 +500,6 @@
             this.label9.Size = new System.Drawing.Size(191, 19);
             this.label9.TabIndex = 20;
             this.label9.Text = "添加奖品：从大奖到小奖添加";
-            // 
-            // PrizeID
-            // 
-            this.PrizeID.DataPropertyName = "PrizeID";
-            this.PrizeID.HeaderText = "编号";
-            this.PrizeID.Name = "PrizeID";
-            this.PrizeID.ReadOnly = true;
-            this.PrizeID.Width = 80;
-            // 
-            // PrizeLevel
-            // 
-            this.PrizeLevel.DataPropertyName = "PrizeLevel";
-            this.PrizeLevel.HeaderText = "级别";
-            this.PrizeLevel.Name = "PrizeLevel";
-            this.PrizeLevel.ReadOnly = true;
-            this.PrizeLevel.Width = 120;
-            // 
-            // PrizeNumber
-            // 
-            this.PrizeNumber.DataPropertyName = "PrizeNumber";
-            this.PrizeNumber.HeaderText = "数量";
-            this.PrizeNumber.Name = "PrizeNumber";
-            this.PrizeNumber.ReadOnly = true;
-            // 
-            // PrizeName
-            // 
-            this.PrizeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PrizeName.DataPropertyName = "PrizeName";
-            this.PrizeName.HeaderText = "奖品";
-            this.PrizeName.Name = "PrizeName";
-            this.PrizeName.ReadOnly = true;
             // 
             // frmSetting
             // 

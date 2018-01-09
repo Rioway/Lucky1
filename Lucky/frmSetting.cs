@@ -30,6 +30,10 @@ namespace Lucky
             else rbRepeat.Checked = true;
 
             gbPrizeDetail.Enabled = false;
+
+            dgvPrize.DataSource = null;
+            dgvPrize.AutoGenerateColumns = false;
+
             if (Program.objListPrize == null) 
                 Program.objListPrize = new List<Prize>();
             else { }
@@ -111,11 +115,24 @@ namespace Lucky
                     LoadPrizeInfo(Program.objListPrize);
                     //更新数量
                     lbTotalPrize.Text = (int.Parse(lbTotalPrize.Text) + objPrize.PrizeNumber).ToString();
+                    EnbleButton();
                     //添加成功
                     MessageBox.Show("添加成功！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     break;
                 case 2:
+                    //修改前数量
+                    lbTotalPrize.Text = (int.Parse(lbTotalPrize.Text) - int.Parse(dgvPrize.CurrentRow.Cells[2].Value.ToString())).ToString();
+
+                    objPrizeService.UpdatePrize(objPrize, Program.objListPrize);
+                    //刷新
+                    LoadPrizeInfo(Program.objListPrize);
+                    //更新数量
+                    lbTotalPrize.Text = (int.Parse(lbTotalPrize.Text) + objPrize.PrizeNumber).ToString();
+                    EnbleButton();
+                    //添加成功
+                    MessageBox.Show("修改成功！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     break;
                 default:
                     break;
@@ -206,6 +223,18 @@ namespace Lucky
             }
             return true;
 
+        }
+
+        private void dgvPrize_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvPrize.Rows.Count == 0) return;
+            else
+            {
+                txtPrizeID.Text = dgvPrize.CurrentRow.Cells[0].Value.ToString();
+                txtPrizeLevel.Text = dgvPrize.CurrentRow.Cells[1].Value.ToString();
+                txtPrizeNumber.Text = dgvPrize.CurrentRow.Cells[2].Value.ToString();
+                txtPrizeName.Text = dgvPrize.CurrentRow.Cells[3].Value.ToString();
+            }
         }
     }
 }
