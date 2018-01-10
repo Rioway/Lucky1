@@ -55,6 +55,7 @@ namespace Lucky
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if (!IsReady()) return;
             if (objfrmStart == null)
             {
                 objfrmStart = new frmStart();
@@ -79,6 +80,25 @@ namespace Lucky
                 objfrmPresent.Activate();
                 objfrmPresent.WindowState = FormWindowState.Normal;
             }
+        }
+        private bool IsReady()
+        {
+            if (Program.objListPerson == null)
+            {
+                MessageBox.Show("抽奖人员信息没有导入，无法进行抽奖！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(Program.startTitle))
+            {
+                MessageBox.Show("抽奖标题未设置！无法抽奖", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (Program.objListPrize == null)
+            {
+                MessageBox.Show("奖品信息没有添加，无法进行抽奖！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
         }
     }
 }

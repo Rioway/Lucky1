@@ -34,6 +34,6 @@ namespace Lucky
         public  static List<Prize> objListPrize = null;
 
         //【6】中奖者信息
-        // public static List<LuckyPerson> objListLuckyPerson = null;
+        public static List<LuckyPerson> objListLuckyPerson = null;
     }
 }

@@ -68,5 +68,24 @@ namespace DAL
                 }
             }
         }
+        public string GetOnePerson(List<Person> objListPerson)
+        {
+            Random objRandom = new Random();
+            int number = objRandom.Next(0, objListPerson.Count);
+            return objListPerson[number].PersonName + "   " + objListPerson[number].PersonMobile;
+        }
+        //把中奖人员从Person中删除
+        public void RemovePersonfromList(string person,List<Person> objList)
+        {
+            string[] personArray = person.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (Person item in objList)
+            {
+                if(item.PersonName == personArray[0] && item.PersonMobile == personArray[1])
+                {
+                    objList.Remove(item);
+                    break;
+                }
+            }
+        }
     }
 }
